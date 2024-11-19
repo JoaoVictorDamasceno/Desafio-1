@@ -23,7 +23,7 @@ int main(){
         switch(opcao){
             case 1:{
                 int armario_ocupado=0;
-                for(int i=0;i<8;i++) {
+                for(int i=0;i<8;i++){
                     if(!(armarios & (1<<i))){
                         armario_ocupado=1;
                         break;
@@ -43,7 +43,7 @@ int main(){
             case 2:
                 printf("Digite o número do armário para liberar (0-7): ");
                 scanf("%d", &posicao);
-                if(posicao<0 || posicao>7) {
+                if(posicao<0 || posicao>7){
                     printf("Número do armário inválido\n");
                 }else if(!(armarios & (1<<posicao))){
                     printf("O armário %d já está livre\n", posicao);
